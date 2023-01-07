@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/mk513147/Multi-Step_Form.git]
+- Live Site URL: [https://mk513147.github.io/Multi-Step_Form/]
 
 ## My process
 
@@ -68,6 +68,6 @@ Didn't use any other resources other than the provided.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Website - [Mohit Kumar](https://www.your-site.com)
+- Frontend Mentor - [@mk513147](https://www.frontendmentor.io/profile/mk513147)
 
