@@ -69,5 +69,5 @@ Didn't use any other resources other than the provided.
 ## Author
 
 - Website - [Mohit Kumar](https://www.your-site.com)
-- Frontend Mentor - [@mk513147](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@mk513147](https://www.frontendmentor.io/profile/mk513147)
 
