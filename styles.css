@@ -1,0 +1,602 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    max-width: 1600px;
+    margin: 0 auto;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    background: hsl(206, 94%, 87%);
+    display: grid;
+    place-content: center;
+}
+
+main {
+    padding: 1rem;
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img,
+svg {
+    display: block;
+}
+
+#stepsContainer {
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+
+.stepControl {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    color: white;
+    position: absolute;
+    top: 2rem;
+    width: 100%;
+}
+
+.steps {
+    display: flex;
+    margin: 0.5rem 0;
+}
+
+.stepButton {
+    margin: 0 1.5rem;
+    border: 1px solid white;
+    outline: 0;
+    font-weight: 700;
+    border-radius: 50%;
+    color: white;
+    background: transparent;
+    transition: background 0.3s;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.stepActive {
+    background: hsl(206, 94%, 87%);
+    color: hsl(213, 96%, 18%);
+}
+
+.stepName {
+    color: white;
+    font-weight: 100;
+    line-height: 1.4rem;
+}
+
+/* ________-------------STEP 1----------------_________ */
+
+#info {
+    display: flex;
+    padding: 1rem 6rem;
+    height: 100%;
+    width: 43rem;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.head {
+    margin: 1rem 0;
+    font-size: 2.5em;
+    color: hsl(213, 96%, 18%);
+}
+
+.stepDescription {
+    color: hsl(231, 11%, 63%);
+    font-size: 1.2em;
+}
+
+.formControl {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin: 2rem 0 0 0;
+}
+
+.formControl label {
+    color: hsl(213, 96%, 18%);
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+.input {
+    margin: 0.4rem 0 1rem 0;
+    padding: 0.8rem 1rem;
+    color: hsl(213, 96%, 18%);
+    font-weight: 700;
+    font-size: 1.2em;
+    outline: none;
+    border: 2px solid lightgray;
+    border-radius: 7px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input::placeholder {
+    color: hsl(231, 11%, 63%);
+}
+
+.input:focus {
+    border: 2px solid hsl(213, 96%, 18%);
+}
+
+.emptyField {
+    border: 2px solid hsl(354, 84%, 57%);
+}
+
+.formInput {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.error {
+    color: hsl(354, 84%, 57%);
+    font-weight: 500;
+    font-size: 1.2em;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.buttonContainer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonContainer2 {
+    display: none;
+    justify-content: space-between;
+}
+
+.step1 {
+    justify-content: flex-end;
+}
+
+.nextBtn {
+    border: 0;
+    border-radius: 7px;
+    padding: 0.8rem 2rem;
+    font-weight: 500;
+    font-size: 1.1em;
+    background: hsl(213, 96%, 18%);
+    color: white;
+    cursor: pointer;
+}
+
+/* _________-------------STEP 2----------------_________ */
+
+#plan {
+    padding: 1rem 6rem;
+    height: 100%;
+    width: 43rem;
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.backBtn {
+    border: 0;
+    border-radius: 7px;
+    padding: 0.8rem 1rem;
+    font-size: 1.1em;
+    font-weight: 700;
+    background: transparent;
+    color: hsl(231, 11%, 63%);
+    cursor: pointer;
+}
+
+.planContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin: 2.5rem 0 2rem 0;
+}
+
+.plans {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 9rem;
+    height: 10rem;
+    border: 1px solid lightgray;
+    border-radius: 7px;
+    padding: 1rem;
+}
+
+.activePlan {
+    background: hsl(217, 100%, 97%);
+    border: 2px solid hsl(213, 96%, 18%) !important;
+}
+
+.planDetails {
+    color: hsl(231, 11%, 63%);
+    font-weight: 500;
+}
+
+.planName {
+    font-weight: 500;
+    font-size: 1.2em;
+    color: hsl(213, 96%, 18%);
+}
+
+.planPrice {
+    color: hsl(231, 11%, 63%);
+    font-weight: 500;
+}
+
+.free {
+    display: none;
+    margin: 0.3rem 0;
+    color: hsl(213, 96%, 18%);
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.toggle {
+    width: 100%;
+    background: hsl(217, 100%, 97%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 7px;
+}
+
+.toggle p {
+    margin: 0 1rem;
+    font-weight: 700;
+}
+
+#month {
+    color: hsl(213, 96%, 18%);
+}
+
+#year {
+    color: hsl(231, 11%, 63%);
+}
+
+#check {
+    appearance: none;
+    position: relative;
+    width: 2.8rem;
+    height: 1.3rem;
+    background: hsl(213, 96%, 18%);
+    outline: 0;
+    border-radius: 20px;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+#check::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 23%;
+    transform: translate(-50%, -50%);
+    background: white;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    transition: left 0.3s;
+}
+
+#check:checked {
+    background: hsl(213, 96%, 18%);
+}
+
+#check:checked::after {
+    left: 75%;
+}
+
+/* _________------------------STEP 3---------------_________ */
+
+#addOn {
+    display: none;
+    padding: 1rem 6rem;
+    height: 100%;
+    width: 43rem;
+    /* display: flex; */
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.addOnContainer {
+    margin: 2rem 0;
+    width: 100%;
+}
+
+.addOnBox {
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid lightgray;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.addCheck {
+    accent-color: hsl(243, 100%, 62%);
+}
+
+.addOnDetails {
+    width: 100%;
+    margin-left: 1rem;
+}
+
+.addOnName {
+    font-size: 1.2em;
+    color: hsl(213, 96%, 18%);
+    font-weight: 500;
+}
+
+.addOnDescription {
+    font-weight: 500;
+    color: hsl(226, 11%, 76%);
+}
+
+.addOnPrice {
+    font-weight: 500;
+    color: hsl(230, 6%, 58%);
+}
+
+/* _________------------STEP 4----------------_________ */
+
+#summary {
+    display: none;
+    padding: 1rem 6rem;
+    height: 100%;
+    width: 43rem;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.billContainer {
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.billDetails {
+    background: hsl(217, 100%, 97%);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.planSelect1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgb(226, 221, 221);
+}
+
+.planSelect2 {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+#changePlan {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#selectedPlan,
+.price {
+    font-size: 1.2em;
+    color: hsl(213, 96%, 18%);
+}
+
+#changePlan,
+.serviceName,
+.total {
+    color: hsl(231, 11%, 63%);
+}
+
+.serviceCharge {
+    font-weight: 500;
+    color: hsl(230, 6%, 58%);
+}
+
+.totalBill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.totalPrice {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: hsl(243, 100%, 62%);
+}
+
+.confirmBtn {
+    background: hsl(243, 100%, 62%);
+    color: white;
+    border: 0;
+    border-radius: 7px;
+    padding: 0.8rem 2rem;
+    font-weight: 500;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+/* ________----------STEP5--------___________ */
+
+
+#finish {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 6rem;
+    height: 100%;
+    width: 43rem;
+}
+
+#finish svg {
+    margin: 1rem 0;
+}
+
+.thank {
+    font-size: 2.2em;
+    font-weight: 700;
+    margin: 1rem 0;
+    color: hsl(213, 96%, 18%);
+}
+
+#finish article {
+    text-align: center;
+    color: hsl(226, 11%, 76%);
+    font-weight: 500;
+}
+
+/* ---------MEDIA QUERIES------------- */
+
+@media (max-width: 425px) {
+    body{
+        height: auto;
+        font-size: 12px;
+    }
+
+    main {
+        width: 100vw;
+        padding: 0;
+        border-radius: 0;
+        background: transparent;
+        justify-content: center;
+    }
+
+    #stepsContainer {
+        border-radius: 0;
+        width: 100%;
+    }
+
+    #stepsContainer>picture>img{
+        width: 100%;
+    }
+
+    .stepControl {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .stepName {
+        display: none;
+    }
+
+    .stepButton{
+        margin: 0 0.5rem;
+    }
+
+    #stepsDescription{
+        width: 90%;
+        overflow: hidden;
+        border-radius: 10px;
+        position: absolute;
+        top: 7rem;
+        box-shadow: 3px 8px 5.3px rgb(0 0 0 / 3%), 5px 20px 17.9px rgb(0 0 0 / 4%), 4px 20px 80px rgb(0 0 0 / 7%);
+    }
+
+    #plan, #addOn, #summary, #info, #finish{
+        padding: 1rem 2rem;
+        width: 100%;
+        background: white;
+    }
+
+    .stepDescription{
+        font-size: 1.5em;
+    }
+
+    .buttonContainer{
+        display: none;
+    }
+
+    .buttonContainer2{
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        width: 100vw;
+        height: 9vh;
+        bottom: 0;
+        background: white;
+        margin: 0;
+        padding: 1rem;
+    }
+
+    #mobBack{
+        display: none;
+    }
+
+    #mobNext{
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        display: block;
+    }
+
+    #mobConfirm{
+        display: none;
+    }
+
+    .plans{
+        height: auto;
+        flex-direction: row;
+        width: 100%;
+        justify-content: flex-start;
+        margin-bottom: 1rem;
+        align-items: center;
+    }
+
+    .planDetails {
+        margin: 0 1rem;
+    }
+
+    .planPrice{
+        margin-top: 3px;
+    }
+
+    .planContainer{
+        margin: 1.5rem 0 0rem 0;
+    }
+
+    .addOnContainer{
+        margin: 1rem 0 0 0;
+    }
+
+    .addOnDescription{
+        margin-top: 3px;
+    }
+}
